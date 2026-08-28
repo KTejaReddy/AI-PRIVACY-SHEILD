@@ -1,0 +1,40 @@
+{
+  "source": "bohr.jpg",
+  "protect_seconds": 250.7,
+  "face_boxes": [
+    [
+      394,
+      360,
+      1151,
+      1570
+    ]
+  ],
+  "quality": {
+    "ssim": 0.9634,
+    "psnr_db": 40.7
+  },
+  "identity_similarity_face_encoders": {
+    "before": 0.9972248673439026,
+    "after": 0.9969577193260193
+  },
+  "arcface_similarity": {
+    "before": 1.0000001192082895,
+    "after": 0.9863976836194664
+  },
+  "refinement": {
+    "applied": true,
+    "iters": 14,
+    "l2_before": 0.076,
+    "l2_after": 0.1641,
+    "note": "In-place ArcFace identity refinement: L2 distance 0.076 -> 0.164 within the same epsilon bound."
+  },
+  "families": [
+    "diffusion_editing",
+    "instruction_editing",
+    "inpainting",
+    "image_to_image",
+    "identity_reference",
+    "face_swap",
+    "vision_encoder"
+  ]
+}

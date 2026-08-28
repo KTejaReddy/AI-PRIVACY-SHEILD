@@ -1,0 +1,32 @@
+
+profile: research
+description: >
+  All accessible evaluation/benchmark models. Loaded only by the research
+  benchmark entry points (scripts/benchmark_*.py), never during normal user
+  processing.
+target_families:
+  - diffusion_editing
+  - inpainting
+  - instruction_editing
+  - image_to_image
+  - identity_reference
+  - face_swap
+  - image_to_video
+  - vlm_conditioning
+  - vision_encoder
+active_models:
+  - stable-diffusion-v1-5/stable-diffusion-v1-5
+  - stable-diffusion-v1-5/stable-diffusion-inpainting
+  - timbrooks/instruct-pix2pix
+  - stable-diffusion-v1-5/stable-diffusion-v1-5#img2img
+  - facenet_vggface2
+  - facenet_casia
+  - arcface_mbf
+  - mobilenet_v3_large
+  - resnet50
+  - openai/clip-vit-large-patch14
+  - image_to_video_adapter
+flags:
+  editing_benchmark: true
+  editing_robustness: true
+  red_team_rounds: 2

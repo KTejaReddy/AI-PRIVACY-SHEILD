@@ -1,0 +1,652 @@
+{
+  "image": "curie.jpg",
+  "dimensions": {
+    "width": 1549,
+    "height": 2105
+  },
+  "face_count": 1,
+  "red_team": [
+    {
+      "round": 1,
+      "weights": {
+        "diffusion": 1.0,
+        "identity": 0.6,
+        "vision": 0.35
+      },
+      "probes": {
+        "diffusion_denoise_increase": -0.024968789013732832,
+        "identity_similarity": 0.9895681142807007,
+        "vision_similarity_mobilenet": 0.5097928047180176
+      },
+      "weakest_family": "diffusion",
+      "seconds": 181.6
+    },
+    {
+      "round": 2,
+      "weights": {
+        "diffusion": 1.5,
+        "identity": 0.6,
+        "vision": 0.35
+      },
+      "probes": {
+        "diffusion_denoise_increase": -0.06554307116104868,
+        "identity_similarity": 0.9893879294395447,
+        "vision_similarity_mobilenet": 0.34741199016571045
+      },
+      "weakest_family": "diffusion",
+      "seconds": 178.3,
+      "stopped": "round budget exhausted"
+    }
+  ],
+  "editing_protection": {
+    "applied": true,
+    "iterations": 5,
+    "epsilon": 0.0175,
+    "resolution": 256,
+    "timestep": 250,
+    "denoising_loss_before": 1.5645,
+    "denoising_loss_after": 1.46,
+    "loss_increase_pct": 0.0,
+    "verified_loss_after": 1.4619,
+    "verified_increase_pct": 0.0,
+    "identity_similarity_before": 0.9909,
+    "identity_similarity_after": 0.9786,
+    "vision_similarity_before": 0.983,
+    "vision_similarity_after": 0.3005,
+    "reverted": false,
+    "surrogate_model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+    "note": "Families targeted: diffusion editing, instruction editing, inpainting, image-to-image, identity-reference, face-swap, vision encoders. single multi-family perturbation applied (eps=0.0175, 5 iters); denoising error 1.564 -> 1.460; SSIM 0.994; identity similarity 0.991 -> 0.979; vision similarity 0.983 -> 0.300.",
+    "families": [
+      "diffusion_editing",
+      "instruction_editing",
+      "inpainting",
+      "image_to_image",
+      "identity_reference",
+      "face_swap",
+      "vision_encoder"
+    ],
+    "weights": {
+      "diffusion": 1.5,
+      "identity": 0.6,
+      "vision": 0.35
+    },
+    "objective": "single multi-family perturbation: diffusion editing (A-D) + identity-reference/face-swap (E-F) + vision encoders (I)"
+  },
+  "visual_quality": {
+    "ssim": 0.9936,
+    "psnr_db": 38.36,
+    "perturbation_linf": 7.0
+  },
+  "benchmark": {
+    "available": true,
+    "settings": {
+      "resolution": 512,
+      "steps": 15,
+      "guidance_scale": 7.5,
+      "seed": 42,
+      "task_metric_weight": 0.6,
+      "clip_weight": 0.4,
+      "clip_delta_scale": 0.1
+    },
+    "tasks": [
+      {
+        "id": "t01_shirt_color",
+        "name": "Change shirt color",
+        "editor_type": "instruction",
+        "instruction": "Make the shirt red.",
+        "target": "a person wearing a red shirt",
+        "mask_kind": null,
+        "task_metric_original": 0.1483,
+        "task_metric_protected": 0.0771,
+        "clip_delta_original": 0.0274,
+        "clip_delta_protected": 0.0077,
+        "success_original": 0.4655,
+        "success_protected": 0.2157,
+        "absolute_change": 0.2498,
+        "relative_change_pct": 53.7,
+        "semantic_preservation_original": 0.9287,
+        "semantic_preservation_protected": 0.9614,
+        "edit_magnitude_original": 0.175,
+        "edit_magnitude_protected": 0.1049,
+        "protected_region_change_original": 0.0,
+        "protected_region_change_protected": 0.0,
+        "samples": 1,
+        "stats": {
+          "success_original": {
+            "mean": 0.4655,
+            "median": 0.4655,
+            "std": 0.0,
+            "min": 0.4655,
+            "max": 0.4655
+          },
+          "success_protected": {
+            "mean": 0.2157,
+            "median": 0.2157,
+            "std": 0.0,
+            "min": 0.2157,
+            "max": 0.2157
+          },
+          "absolute_change": {
+            "mean": 0.2498,
+            "median": 0.2498,
+            "std": 0.0,
+            "min": 0.2498,
+            "max": 0.2498
+          }
+        }
+      },
+      {
+        "id": "t02_background",
+        "name": "Change background",
+        "editor_type": "instruction",
+        "instruction": "Make the background a beach.",
+        "target": "a person at a sunny beach",
+        "mask_kind": null,
+        "task_metric_original": 0.2231,
+        "task_metric_protected": 0.4186,
+        "clip_delta_original": 0.0131,
+        "clip_delta_protected": 0.0083,
+        "success_original": 0.4986,
+        "success_protected": 0.633,
+        "absolute_change": -0.1345,
+        "relative_change_pct": -27.0,
+        "semantic_preservation_original": 0.892,
+        "semantic_preservation_protected": 0.8788,
+        "edit_magnitude_original": 0.2661,
+        "edit_magnitude_protected": 0.4553,
+        "protected_region_change_original": 0.0,
+        "protected_region_change_protected": 0.0,
+        "samples": 1,
+        "stats": {
+          "success_original": {
+            "mean": 0.4986,
+            "median": 0.4986,
+            "std": 0.0,
+            "min": 0.4986,
+            "max": 0.4986
+          },
+          "success_protected": {
+            "mean": 0.633,
+            "median": 0.633,
+            "std": 0.0,
+            "min": 0.633,
+            "max": 0.633
+          },
+          "absolute_change": {
+            "mean": -0.1345,
+            "median": -0.1345,
+            "std": 0.0,
+            "min": -0.1345,
+            "max": -0.1345
+          }
+        }
+      },
+      {
+        "id": "t03_hat",
+        "name": "Add a hat",
+        "editor_type": "instruction",
+        "instruction": "Add a hat.",
+        "target": "a person wearing a hat",
+        "mask_kind": null,
+        "task_metric_original": 0.2778,
+        "task_metric_protected": 0.2261,
+        "clip_delta_original": 0.0063,
+        "clip_delta_protected": 0.0042,
+        "success_original": 0.5807,
+        "success_protected": 0.4688,
+        "absolute_change": 0.1119,
+        "relative_change_pct": 19.3,
+        "semantic_preservation_original": 0.9174,
+        "semantic_preservation_protected": 0.9365,
+        "edit_magnitude_original": 0.1658,
+        "edit_magnitude_protected": 0.1631,
+        "protected_region_change_original": 0.0,
+        "protected_region_change_protected": 0.0,
+        "samples": 1,
+        "stats": {
+          "success_original": {
+            "mean": 0.5807,
+            "median": 0.5807,
+            "std": 0.0,
+            "min": 0.5807,
+            "max": 0.5807
+          },
+          "success_protected": {
+            "mean": 0.4688,
+            "median": 0.4688,
+            "std": 0.0,
+            "min": 0.4688,
+            "max": 0.4688
+          },
+          "absolute_change": {
+            "mean": 0.1119,
+            "median": 0.1119,
+            "std": 0.0,
+            "min": 0.1119,
+            "max": 0.1119
+          }
+        }
+      },
+      {
+        "id": "t05_sketch",
+        "name": "Convert to pencil sketch",
+        "editor_type": "instruction",
+        "instruction": "Make it a pencil sketch.",
+        "target": "a pencil sketch drawing",
+        "mask_kind": null,
+        "task_metric_original": 0.0,
+        "task_metric_protected": 0.0,
+        "clip_delta_original": 0.029,
+        "clip_delta_protected": 0.0078,
+        "success_original": 0.1158,
+        "success_protected": 0.0313,
+        "absolute_change": 0.0846,
+        "relative_change_pct": 73.0,
+        "semantic_preservation_original": 0.9291,
+        "semantic_preservation_protected": 0.9438,
+        "edit_magnitude_original": 0.3222,
+        "edit_magnitude_protected": 0.2463,
+        "protected_region_change_original": 0.0,
+        "protected_region_change_protected": 0.0,
+        "samples": 1,
+        "stats": {
+          "success_original": {
+            "mean": 0.1158,
+            "median": 0.1158,
+            "std": 0.0,
+            "min": 0.1158,
+            "max": 0.1158
+          },
+          "success_protected": {
+            "mean": 0.0313,
+            "median": 0.0313,
+            "std": 0.0,
+            "min": 0.0313,
+            "max": 0.0313
+          },
+          "absolute_change": {
+            "mean": 0.0846,
+            "median": 0.0846,
+            "std": 0.0,
+            "min": 0.0846,
+            "max": 0.0846
+          }
+        }
+      },
+      {
+        "id": "t01_shirt_color",
+        "name": "Change shirt color",
+        "editor_type": "inpainting",
+        "instruction": "Make the shirt red.",
+        "target": "a person wearing a red shirt",
+        "mask_kind": "shirt",
+        "task_metric_original": 0.0055,
+        "task_metric_protected": 0.0039,
+        "clip_delta_original": 0.004,
+        "clip_delta_protected": -0.0008,
+        "success_original": 0.0293,
+        "success_protected": 0.0093,
+        "absolute_change": 0.0199,
+        "relative_change_pct": 68.1,
+        "semantic_preservation_original": 0.9272,
+        "semantic_preservation_protected": 0.9648,
+        "edit_magnitude_original": 0.1949,
+        "edit_magnitude_protected": 0.1981,
+        "protected_region_change_original": 0.0,
+        "protected_region_change_protected": 0.0,
+        "samples": 1,
+        "stats": {
+          "success_original": {
+            "mean": 0.0293,
+            "median": 0.0293,
+            "std": 0.0,
+            "min": 0.0293,
+            "max": 0.0293
+          },
+          "success_protected": {
+            "mean": 0.0093,
+            "median": 0.0093,
+            "std": 0.0,
+            "min": 0.0093,
+            "max": 0.0093
+          },
+          "absolute_change": {
+            "mean": 0.0199,
+            "median": 0.0199,
+            "std": 0.0,
+            "min": 0.0199,
+            "max": 0.0199
+          }
+        }
+      },
+      {
+        "id": "t02_background",
+        "name": "Change background",
+        "editor_type": "inpainting",
+        "instruction": "Make the background a beach.",
+        "target": "a person at a sunny beach",
+        "mask_kind": "background",
+        "task_metric_original": 0.4475,
+        "task_metric_protected": 0.4501,
+        "clip_delta_original": 0.0717,
+        "clip_delta_protected": 0.0669,
+        "success_original": 0.8868,
+        "success_protected": 0.8675,
+        "absolute_change": 0.0192,
+        "relative_change_pct": 2.2,
+        "semantic_preservation_original": 0.3785,
+        "semantic_preservation_protected": 0.3808,
+        "edit_magnitude_original": 0.5094,
+        "edit_magnitude_protected": 0.5119,
+        "protected_region_change_original": 0.0,
+        "protected_region_change_protected": 0.0,
+        "samples": 1,
+        "stats": {
+          "success_original": {
+            "mean": 0.8868,
+            "median": 0.8868,
+            "std": 0.0,
+            "min": 0.8868,
+            "max": 0.8868
+          },
+          "success_protected": {
+            "mean": 0.8675,
+            "median": 0.8675,
+            "std": 0.0,
+            "min": 0.8675,
+            "max": 0.8675
+          },
+          "absolute_change": {
+            "mean": 0.0192,
+            "median": 0.0192,
+            "std": 0.0,
+            "min": 0.0192,
+            "max": 0.0192
+          }
+        }
+      },
+      {
+        "id": "t03_hat",
+        "name": "Add a hat",
+        "editor_type": "inpainting",
+        "instruction": "Add a hat.",
+        "target": "a person wearing a hat",
+        "mask_kind": "hair",
+        "task_metric_original": 0.5188,
+        "task_metric_protected": 0.5954,
+        "clip_delta_original": 0.0442,
+        "clip_delta_protected": 0.0504,
+        "success_original": 0.7769,
+        "success_protected": 0.8017,
+        "absolute_change": -0.0248,
+        "relative_change_pct": -3.2,
+        "semantic_preservation_original": 0.7918,
+        "semantic_preservation_protected": 0.7772,
+        "edit_magnitude_original": 0.2252,
+        "edit_magnitude_protected": 0.241,
+        "protected_region_change_original": 0.0,
+        "protected_region_change_protected": 0.0,
+        "samples": 1,
+        "stats": {
+          "success_original": {
+            "mean": 0.7769,
+            "median": 0.7769,
+            "std": 0.0,
+            "min": 0.7769,
+            "max": 0.7769
+          },
+          "success_protected": {
+            "mean": 0.8017,
+            "median": 0.8017,
+            "std": 0.0,
+            "min": 0.8017,
+            "max": 0.8017
+          },
+          "absolute_change": {
+            "mean": -0.0248,
+            "median": -0.0248,
+            "std": 0.0,
+            "min": -0.0248,
+            "max": -0.0248
+          }
+        }
+      },
+      {
+        "id": "t05_sketch",
+        "name": "Convert to pencil sketch",
+        "editor_type": "inpainting",
+        "instruction": "Make it a pencil sketch.",
+        "target": "a pencil sketch drawing",
+        "mask_kind": "person",
+        "task_metric_original": 0.0,
+        "task_metric_protected": 0.0,
+        "clip_delta_original": 0.0014,
+        "clip_delta_protected": -0.0153,
+        "success_original": 0.0056,
+        "success_protected": 0.0,
+        "absolute_change": 0.0056,
+        "relative_change_pct": null,
+        "semantic_preservation_original": 0.979,
+        "semantic_preservation_protected": 0.9819,
+        "edit_magnitude_original": 0.0486,
+        "edit_magnitude_protected": 0.0528,
+        "protected_region_change_original": 0.0,
+        "protected_region_change_protected": 0.0,
+        "samples": 1,
+        "stats": {
+          "success_original": {
+            "mean": 0.0056,
+            "median": 0.0056,
+            "std": 0.0,
+            "min": 0.0056,
+            "max": 0.0056
+          },
+          "success_protected": {
+            "mean": 0.0,
+            "median": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "absolute_change": {
+            "mean": 0.0056,
+            "median": 0.0056,
+            "std": 0.0,
+            "min": 0.0056,
+            "max": 0.0056
+          }
+        }
+      },
+      {
+        "id": "t02_background",
+        "name": "Change background",
+        "editor_type": "image2image",
+        "instruction": "Make the background a beach.",
+        "target": "a person at a sunny beach",
+        "mask_kind": null,
+        "task_metric_original": 0.1353,
+        "task_metric_protected": 0.1566,
+        "clip_delta_original": 0.0147,
+        "clip_delta_protected": -0.001,
+        "success_original": 0.3294,
+        "success_protected": 0.3131,
+        "absolute_change": 0.0163,
+        "relative_change_pct": 4.9,
+        "semantic_preservation_original": 0.4631,
+        "semantic_preservation_protected": 0.5012,
+        "edit_magnitude_original": 0.2064,
+        "edit_magnitude_protected": 0.2223,
+        "protected_region_change_original": 0.0,
+        "protected_region_change_protected": 0.0,
+        "samples": 1,
+        "stats": {
+          "success_original": {
+            "mean": 0.3294,
+            "median": 0.3294,
+            "std": 0.0,
+            "min": 0.3294,
+            "max": 0.3294
+          },
+          "success_protected": {
+            "mean": 0.3131,
+            "median": 0.3131,
+            "std": 0.0,
+            "min": 0.3131,
+            "max": 0.3131
+          },
+          "absolute_change": {
+            "mean": 0.0163,
+            "median": 0.0163,
+            "std": 0.0,
+            "min": 0.0163,
+            "max": 0.0163
+          }
+        }
+      },
+      {
+        "id": "t05_sketch",
+        "name": "Convert to pencil sketch",
+        "editor_type": "image2image",
+        "instruction": "Make it a pencil sketch.",
+        "target": "a pencil sketch drawing",
+        "mask_kind": null,
+        "task_metric_original": 0.0,
+        "task_metric_protected": 0.0,
+        "clip_delta_original": 0.0998,
+        "clip_delta_protected": 0.0691,
+        "success_original": 0.3994,
+        "success_protected": 0.2765,
+        "absolute_change": 0.1229,
+        "relative_change_pct": 30.8,
+        "semantic_preservation_original": 0.4858,
+        "semantic_preservation_protected": 0.501,
+        "edit_magnitude_original": 0.1809,
+        "edit_magnitude_protected": 0.1895,
+        "protected_region_change_original": 0.0,
+        "protected_region_change_protected": 0.0,
+        "samples": 1,
+        "stats": {
+          "success_original": {
+            "mean": 0.3994,
+            "median": 0.3994,
+            "std": 0.0,
+            "min": 0.3994,
+            "max": 0.3994
+          },
+          "success_protected": {
+            "mean": 0.2765,
+            "median": 0.2765,
+            "std": 0.0,
+            "min": 0.2765,
+            "max": 0.2765
+          },
+          "absolute_change": {
+            "mean": 0.1229,
+            "median": 0.1229,
+            "std": 0.0,
+            "min": 0.1229,
+            "max": 0.1229
+          }
+        }
+      }
+    ],
+    "robustness": [
+      {
+        "transform": "jpeg_compression",
+        "tasks": [
+          {
+            "task_id": "t01_shirt_color",
+            "name": "Change shirt color",
+            "success_original": 0.4655,
+            "success_after_transform": 0.236
+          },
+          {
+            "task_id": "t02_background",
+            "name": "Change background",
+            "success_original": 0.4986,
+            "success_after_transform": 0.6218
+          }
+        ],
+        "mean_success_original": 0.482,
+        "mean_success_after_transform": 0.4289
+      },
+      {
+        "transform": "resize",
+        "tasks": [
+          {
+            "task_id": "t01_shirt_color",
+            "name": "Change shirt color",
+            "success_original": 0.4655,
+            "success_after_transform": 0.1935
+          },
+          {
+            "task_id": "t02_background",
+            "name": "Change background",
+            "success_original": 0.4986,
+            "success_after_transform": 0.6198
+          }
+        ],
+        "mean_success_original": 0.482,
+        "mean_success_after_transform": 0.4067
+      }
+    ],
+    "aggregate": {
+      "mean_original": 0.4088,
+      "mean_protected": 0.3617,
+      "mean_absolute_change": 0.0471,
+      "mean_relative_change_pct": 24.6,
+      "tasks_reduced": 8,
+      "tasks_total": 10,
+      "mean_reduction_pct": 24.6
+    },
+    "note": "Multi-model benchmark over 10 task/editor rows (10 controlled edits: same prompt, same seed, same settings, only the input image changes). Success = 60% task-specific pixel metric + 40% CLIP semantic alignment; relative change is reported only when the original success is meaningful."
+  },
+  "benchmark_seconds": 185.8,
+  "robustness_seconds": 85.5,
+  "identity_reference": [
+    {
+      "family": "identity_reference",
+      "model": "facenet_casia",
+      "model_name": "FaceNet (CASIA-WebFace) \u2014 evaluation",
+      "role": "evaluation",
+      "similarity_original": 0.9874,
+      "disruption": 0.0126,
+      "faces": 1
+    },
+    {
+      "family": "identity_reference",
+      "model": "arcface_mbf",
+      "model_name": "ArcFace (MobileFaceNet) \u2014 held out",
+      "role": "held_out",
+      "similarity_original": 0.9688,
+      "disruption": 0.0312,
+      "faces": 1
+    }
+  ],
+  "vision_encoders": [
+    {
+      "family": "vision_encoder",
+      "model": "mobilenet_v3_large",
+      "model_name": "MobileNetV3-Large \u2014 optimization",
+      "role": "optimization",
+      "similarity_original": 0.3474,
+      "disruption": 0.6526
+    },
+    {
+      "family": "vision_encoder",
+      "model": "resnet50",
+      "model_name": "ResNet50 \u2014 held out",
+      "role": "held_out",
+      "similarity_original": 0.7617,
+      "disruption": 0.2383
+    },
+    {
+      "family": "vlm_conditioning",
+      "model": "openai/clip-vit-large-patch14",
+      "model_name": "CLIP ViT-L/14 \u2014 evaluation",
+      "role": "evaluation",
+      "similarity_original": 0.9331,
+      "disruption": 0.0669
+    }
+  ]
+}

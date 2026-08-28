@@ -1,0 +1,35 @@
+{
+  "source": "lincoln",
+  "protect_seconds": 0.0,
+  "quality": {
+    "ssim": 0.9841,
+    "psnr_db": 41.48
+  },
+  "reference_embedding_sim": {
+    "before": 1.0,
+    "after": 0.9861
+  },
+  "rows": [
+    {
+      "prompt": "professional studio portrait photo of a ",
+      "orig_arcface_sim": 0.654,
+      "orig_facenet_sim": 0.6588,
+      "prot_arcface_sim": 0.5601,
+      "prot_facenet_sim": 0.6926
+    },
+    {
+      "prompt": "outdoor casual portrait photo of a perso",
+      "orig_arcface_sim": 0.3203,
+      "orig_facenet_sim": 0.3939,
+      "prot_arcface_sim": 0.2667,
+      "prot_facenet_sim": 0.3345
+    },
+    {
+      "prompt": "portrait photo of a person, dramatic lig",
+      "orig_arcface_sim": 0.1152,
+      "orig_facenet_sim": 0.164,
+      "prot_arcface_sim": 0.166,
+      "prot_facenet_sim": 0.1779
+    }
+  ]
+}

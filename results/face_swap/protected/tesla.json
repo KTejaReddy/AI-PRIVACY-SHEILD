@@ -1,0 +1,40 @@
+{
+  "source": "tesla.jpg",
+  "protect_seconds": 166.8,
+  "face_boxes": [
+    [
+      296,
+      410,
+      740,
+      991
+    ]
+  ],
+  "quality": {
+    "ssim": 0.9764,
+    "psnr_db": 41.81
+  },
+  "identity_similarity_face_encoders": {
+    "before": 0.9853547215461731,
+    "after": 0.9786219000816345
+  },
+  "arcface_similarity": {
+    "before": 1.0000001192082895,
+    "after": 0.9957124588308187
+  },
+  "refinement": {
+    "applied": true,
+    "iters": 14,
+    "l2_before": 0.1438,
+    "l2_after": 0.2187,
+    "note": "In-place ArcFace identity refinement: L2 distance 0.144 -> 0.219 within the same epsilon bound."
+  },
+  "families": [
+    "diffusion_editing",
+    "instruction_editing",
+    "inpainting",
+    "image_to_image",
+    "identity_reference",
+    "face_swap",
+    "vision_encoder"
+  ]
+}

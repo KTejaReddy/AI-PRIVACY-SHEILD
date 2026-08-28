@@ -1,0 +1,154 @@
+{
+  "source": "tesla.jpg",
+  "protect_seconds": 166.8,
+  "face_boxes": [
+    [
+      296,
+      410,
+      740,
+      991
+    ]
+  ],
+  "quality": {
+    "ssim": 0.9764,
+    "psnr_db": 41.81
+  },
+  "identity_similarity_face_encoders": {
+    "before": 0.9853547215461731,
+    "after": 0.9786219000816345
+  },
+  "arcface_similarity": {
+    "before": 1.0000001192082895,
+    "after": 0.9957124588308187
+  },
+  "refinement": {
+    "applied": true,
+    "iters": 14,
+    "l2_before": 0.1438,
+    "l2_after": 0.2187,
+    "note": "In-place ArcFace identity refinement: L2 distance 0.144 -> 0.219 within the same epsilon bound."
+  },
+  "families": [
+    "diffusion_editing",
+    "instruction_editing",
+    "inpainting",
+    "image_to_image",
+    "identity_reference",
+    "face_swap",
+    "vision_encoder"
+  ],
+  "rows": [
+    {
+      "target": "bohr",
+      "variant": "original",
+      "arcface_source_sim": 0.8592880964279175,
+      "arcface_target_sim": 0.03059236705303192,
+      "facenet_source_sim": 0.8298907279968262
+    },
+    {
+      "target": "bohr",
+      "variant": "protected",
+      "arcface_source_sim": 0.835676372051239,
+      "arcface_target_sim": -0.00899544358253479,
+      "facenet_source_sim": 0.819890022277832
+    },
+    {
+      "target": "bohr",
+      "variant": "protected+jpeg_compression",
+      "arcface_source_sim": 0.8330278396606445,
+      "arcface_target_sim": 0.0413011834025383,
+      "facenet_source_sim": 0.823794424533844
+    },
+    {
+      "target": "bohr",
+      "variant": "protected+resize",
+      "arcface_source_sim": 0.8459924459457397,
+      "arcface_target_sim": 0.019291847944259644,
+      "facenet_source_sim": 0.8163634538650513
+    },
+    {
+      "target": "curie",
+      "variant": "original",
+      "arcface_source_sim": 0.8203678131103516,
+      "arcface_target_sim": 0.12651413679122925,
+      "facenet_source_sim": 0.848496675491333
+    },
+    {
+      "target": "curie",
+      "variant": "protected",
+      "arcface_source_sim": 0.8048746585845947,
+      "arcface_target_sim": 0.13522711396217346,
+      "facenet_source_sim": 0.8421484231948853
+    },
+    {
+      "target": "curie",
+      "variant": "protected+jpeg_compression",
+      "arcface_source_sim": 0.7958954572677612,
+      "arcface_target_sim": 0.11282927542924881,
+      "facenet_source_sim": 0.8355906009674072
+    },
+    {
+      "target": "curie",
+      "variant": "protected+resize",
+      "arcface_source_sim": 0.8169975876808167,
+      "arcface_target_sim": 0.0983048528432846,
+      "facenet_source_sim": 0.8201261758804321
+    },
+    {
+      "target": "lincoln",
+      "variant": "original",
+      "arcface_source_sim": 0.83424973487854,
+      "arcface_target_sim": 0.026244889944791794,
+      "facenet_source_sim": 0.804348349571228
+    },
+    {
+      "target": "lincoln",
+      "variant": "protected",
+      "arcface_source_sim": 0.809921383857727,
+      "arcface_target_sim": 0.03509645536541939,
+      "facenet_source_sim": 0.788102388381958
+    },
+    {
+      "target": "lincoln",
+      "variant": "protected+jpeg_compression",
+      "arcface_source_sim": 0.8020544052124023,
+      "arcface_target_sim": 0.02352793887257576,
+      "facenet_source_sim": 0.7785499095916748
+    },
+    {
+      "target": "lincoln",
+      "variant": "protected+resize",
+      "arcface_source_sim": 0.8119212985038757,
+      "arcface_target_sim": 0.021282751113176346,
+      "facenet_source_sim": 0.7873647212982178
+    },
+    {
+      "target": "einstein",
+      "variant": "original",
+      "arcface_source_sim": 0.8368874192237854,
+      "arcface_target_sim": 0.04707163944840431,
+      "facenet_source_sim": 0.8516785502433777
+    },
+    {
+      "target": "einstein",
+      "variant": "protected",
+      "arcface_source_sim": 0.8274544477462769,
+      "arcface_target_sim": 0.07166015356779099,
+      "facenet_source_sim": 0.8230016231536865
+    },
+    {
+      "target": "einstein",
+      "variant": "protected+jpeg_compression",
+      "arcface_source_sim": 0.811131477355957,
+      "arcface_target_sim": 0.06336678564548492,
+      "facenet_source_sim": 0.826622724533081
+    },
+    {
+      "target": "einstein",
+      "variant": "protected+resize",
+      "arcface_source_sim": 0.8171045780181885,
+      "arcface_target_sim": 0.05946047231554985,
+      "facenet_source_sim": 0.8314822912216187
+    }
+  ]
+}

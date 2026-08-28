@@ -1,0 +1,21 @@
+
+profile: production
+description: >
+  Minimum models needed to GENERATE the one protection perturbation for a
+  user upload. No benchmark models are loaded during normal processing.
+target_families:
+  - diffusion_editing
+  - instruction_editing
+  - inpainting
+  - image_to_image
+  - identity_reference
+  - face_swap
+  - vision_encoder
+active_models:
+  - stable-diffusion-v1-5/stable-diffusion-v1-5
+  - facenet_vggface2
+  - mobilenet_v3_large
+flags:
+  editing_benchmark: false
+  editing_robustness: true
+  red_team_rounds: 0

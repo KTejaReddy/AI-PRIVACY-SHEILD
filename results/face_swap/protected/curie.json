@@ -1,0 +1,40 @@
+{
+  "source": "curie.jpg",
+  "protect_seconds": 187.9,
+  "face_boxes": [
+    [
+      431,
+      411,
+      1009,
+      1157
+    ]
+  ],
+  "quality": {
+    "ssim": 0.9692,
+    "psnr_db": 41.56
+  },
+  "identity_similarity_face_encoders": {
+    "before": 0.9885457158088684,
+    "after": 0.977515459060669
+  },
+  "arcface_similarity": {
+    "before": 0.9999999999989999,
+    "after": 0.9962237475041767
+  },
+  "refinement": {
+    "applied": true,
+    "iters": 14,
+    "l2_before": 0.084,
+    "l2_after": 0.0996,
+    "note": "In-place ArcFace identity refinement: L2 distance 0.084 -> 0.100 within the same epsilon bound."
+  },
+  "families": [
+    "diffusion_editing",
+    "instruction_editing",
+    "inpainting",
+    "image_to_image",
+    "identity_reference",
+    "face_swap",
+    "vision_encoder"
+  ]
+}

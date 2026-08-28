@@ -1,0 +1,35 @@
+{
+  "source": "einstein",
+  "protect_seconds": 0.0,
+  "quality": {
+    "ssim": 0.9798,
+    "psnr_db": 41.14
+  },
+  "reference_embedding_sim": {
+    "before": 1.0,
+    "after": 0.9932
+  },
+  "rows": [
+    {
+      "prompt": "professional studio portrait photo of a ",
+      "orig_arcface_sim": 0.4927,
+      "orig_facenet_sim": 0.3873,
+      "prot_arcface_sim": 0.4646,
+      "prot_facenet_sim": 0.4553
+    },
+    {
+      "prompt": "outdoor casual portrait photo of a perso",
+      "orig_arcface_sim": null,
+      "orig_facenet_sim": null,
+      "prot_arcface_sim": null,
+      "prot_facenet_sim": null
+    },
+    {
+      "prompt": "portrait photo of a person, dramatic lig",
+      "orig_arcface_sim": null,
+      "orig_facenet_sim": null,
+      "prot_arcface_sim": 0.3549,
+      "prot_facenet_sim": 0.5116
+    }
+  ]
+}

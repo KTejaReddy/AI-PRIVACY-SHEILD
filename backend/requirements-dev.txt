@@ -1,0 +1,11 @@
+# Test-only dependencies
+pytest>=8.0
+httpx>=0.27
+qrcode>=7.4  # used to generate QR fixtures for the sensitive-content tests
+
+# Research-only benchmark dependencies (face-swap + reference-generation evaluation).
+# NOT loaded by the production application — see backend/configs/production.yaml.
+insightface>=0.7.3,<1.1  # face detection/recognition + INSwapper evaluation
+ip_adapter>=0.1  # IP-Adapter FaceID reference-conditioned generation evaluation
+onnxruntime>=1.17  # insightface ONNX runtime
+einops>=0.8  # ip_adapter dependency

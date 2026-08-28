@@ -1,0 +1,40 @@
+{
+  "source": "einstein.jpg",
+  "protect_seconds": 126.4,
+  "face_boxes": [
+    [
+      147,
+      100,
+      373,
+      441
+    ]
+  ],
+  "quality": {
+    "ssim": 0.9798,
+    "psnr_db": 41.14
+  },
+  "identity_similarity_face_encoders": {
+    "before": 0.9933201670646667,
+    "after": 0.9917172789573669
+  },
+  "arcface_similarity": {
+    "before": 0.9999999999989999,
+    "after": 0.9964285492887068
+  },
+  "refinement": {
+    "applied": true,
+    "iters": 14,
+    "l2_before": 0.0927,
+    "l2_after": 0.1381,
+    "note": "In-place ArcFace identity refinement: L2 distance 0.093 -> 0.138 within the same epsilon bound."
+  },
+  "families": [
+    "diffusion_editing",
+    "instruction_editing",
+    "inpainting",
+    "image_to_image",
+    "identity_reference",
+    "face_swap",
+    "vision_encoder"
+  ]
+}

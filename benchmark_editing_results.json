@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-08-15T13:23:37+00:00",
+  "seed": 42,
+  "hardware": "cpu",
+  "config_note": "Editor InstructPix2Pix 512px / 15 steps / guidance 7.5 / image-guidance 1.5; surrogate SD1.5 (t=250, eps=0.0175); scorer CLIP ViT-L/14",
+  "images": [
+    {
+      "image": "einstein.jpg",
+      "dimensions": {
+        "width": 500,
+        "height": 667
+      },
+      "editing_protection": {
+        "applied": false,
+        "iterations": 0,
+        "epsilon": 0.0,
+        "resolution": 0,
+        "timestep": 0,
+        "denoising_loss_before": 0.0,
+        "denoising_loss_after": 0.0,
+        "loss_increase_pct": 0.0,
+        "verified_loss_after": 0.0,
+        "verified_increase_pct": 0.0,
+        "reverted": false,
+        "surrogate_model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+        "note": "Anti-diffusion surrogate unavailable on this hardware (ModuleNotFoundError).",
+        "objective": "maximize SD1.5 denoising reconstruction error via a high-frequency pixel-space perturbation (Photoguard-style anti-diffusion attack)"
+      },
+      "editing_protection_seconds": 0.1,
+      "benchmark": {
+        "available": false,
+        "model": "InstructPix2Pix (timbrooks/instruct-pix2pix) \u2014 held-out evaluation",
+        "score_model": "CLIP ViT-L/14 (openai/clip-vit-large-patch14)",
+        "settings": {
+          "resolution": 512,
+          "steps": 15,
+          "guidance_scale": 7.5,
+          "image_guidance_scale": 1.5,
+          "seed": 42
+        },
+        "tasks": [],
+        "aggregate": {
+          "mean_original": 0.0,
+          "mean_protected": 0.0,
+          "mean_reduction_pct": 0.0
+        },
+        "note": "AI-editing benchmark failed: ModuleNotFoundError. No editing scores were computed."
+      },
+      "benchmark_seconds": 2.4,
+      "visual_quality": {
+        "ssim": 1.0,
+        "psnr_db": 99.0,
+        "perturbation_linf": 0.0
+      }
+    }
+  ],
+  "aggregates": {
+    "mean_reduction_pct": {
+      "mean_original": 0.0,
+      "mean_protected": 0.0,
+      "mean_reduction_pct": 0.0
+    }
+  }
+}

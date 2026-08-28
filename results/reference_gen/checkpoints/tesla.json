@@ -1,0 +1,35 @@
+{
+  "source": "tesla",
+  "protect_seconds": 0.0,
+  "quality": {
+    "ssim": 0.9764,
+    "psnr_db": 41.81
+  },
+  "reference_embedding_sim": {
+    "before": 1.0,
+    "after": 0.9689
+  },
+  "rows": [
+    {
+      "prompt": "professional studio portrait photo of a ",
+      "orig_arcface_sim": 0.2258,
+      "orig_facenet_sim": 0.0458,
+      "prot_arcface_sim": 0.2751,
+      "prot_facenet_sim": 0.378
+    },
+    {
+      "prompt": "outdoor casual portrait photo of a perso",
+      "orig_arcface_sim": 0.0886,
+      "orig_facenet_sim": -0.015,
+      "prot_arcface_sim": 0.0988,
+      "prot_facenet_sim": 0.3524
+    },
+    {
+      "prompt": "portrait photo of a person, dramatic lig",
+      "orig_arcface_sim": 0.3029,
+      "orig_facenet_sim": 0.4639,
+      "prot_arcface_sim": 0.2547,
+      "prot_facenet_sim": 0.3562
+    }
+  ]
+}

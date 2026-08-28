@@ -1,0 +1,46 @@
+# AI Privacy Shield - backend runtime dependencies
+# Core web framework
+fastapi>=0.111
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+sse-starlette>=2.1
+python-dotenv>=1.0
+
+# Image / array processing
+numpy>=1.26,<2  # facenet-pytorch and scipy 1.13 require numpy 1.x
+scipy>=1.10,<1.14  # matches numpy 1.x (scipy>=1.14 needs numpy 2.x)
+pillow>=10.2,<10.3  # facenet-pytorch pins Pillow <10.3
+opencv-python-headless>=4.9
+
+# Deep learning (face embeddings + adversarial optimization)
+# `pip install torch torchvision` on Windows/Linux pulls CUDA-enabled wheels.
+torch>=2.2
+torchvision>=0.17
+facenet-pytorch>=2.6
+
+# Verification surrogate (optional): ArcFace via insightface (onnxruntime)
+onnxruntime>=1.17
+
+# Optional: local OCR (text / PII detection). RapidOCR is pure onnxruntime,
+# no system tesseract required. Models auto-download on first use.
+rapidocr-onnxruntime>=1.3.24
+
+# AI-editing protection (primary objective)
+# - InstructPix2Pix  = local instruction-guided editing model (held-out benchmark)
+# - Stable Diffusion v1.5 = anti-diffusion surrogate for the optimizer
+# - CLIP ViT-L/14    = edit-success scorer
+# - accelerate       = CPU offloading so everything fits in ~4 GB VRAM
+# - hf_transfer      = fast, resumable model downloads
+# Pinned diffusers <0.30: 0.29.x is the last line compatible with torch 2.2
+# (newer releases require torch>=2.3's torch.xpu API).
+diffusers>=0.29,<0.30
+transformers>=4.41
+accelerate>=0.30
+hf_transfer>=0.1.8
+
+# Provenance layer (optional second defense, NOT an AI blocker): embeds a
+# cryptographically signed C2PA manifest into the protected PNG. Self-signed
+# keypair is generated locally on first use; ship your own key via
+# AIPS_C2PA_KEY / AIPS_C2PA_CERT for real deployments.
+c2pa-python>=0.35
+cryptography>=42

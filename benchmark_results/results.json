@@ -1,0 +1,145 @@
+{
+  "hardware": "cuda",
+  "protection": {
+    "applied": true,
+    "iterations": 3,
+    "epsilon": 0.0175,
+    "resolution": 256,
+    "timestep": 250,
+    "denoising_loss_before": 1.8271,
+    "denoising_loss_after": 2.1973,
+    "loss_increase_pct": 20.3,
+    "verified_loss_after": 2.1543,
+    "verified_increase_pct": 17.9,
+    "reverted": false,
+    "surrogate_model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+    "note": "Multi-model anti-diffusion perturbation applied (eps=0.0175, 3 iterations, denoising error 1.827 -> 2.197, SSIM 0.979).",
+    "objective": "multi-model editing disruption (Instruction, Inpainting, Image2Image)"
+  },
+  "quality": {
+    "ssim": 0.9788100274651254,
+    "psnr": 39.79837137889712
+  },
+  "results": [
+    {
+      "editor": "instruct",
+      "task": "shirt_color",
+      "prompt": "Change the shirt to red.",
+      "seed": 42,
+      "transform": "none",
+      "score_orig": 0.0526551216766315,
+      "score_prot": 0.00356395219792649,
+      "diff": 0.04909116947870501
+    },
+    {
+      "editor": "instruct",
+      "task": "shirt_color",
+      "prompt": "Change the shirt to red.",
+      "seed": 42,
+      "transform": "resize",
+      "score_orig": 0.04581781260692527,
+      "score_prot": 0.007694186606859971,
+      "diff": 0.0381236260000653
+    },
+    {
+      "editor": "instruct",
+      "task": "hat",
+      "prompt": "Add a hat.",
+      "seed": 42,
+      "transform": "none",
+      "score_orig": 0.04435483866527923,
+      "score_prot": 0.02700391004139588,
+      "diff": 0.01735092862388335
+    },
+    {
+      "editor": "instruct",
+      "task": "hat",
+      "prompt": "Add a hat.",
+      "seed": 42,
+      "transform": "resize",
+      "score_orig": 0.05707097761768065,
+      "score_prot": 0.03434292891643295,
+      "diff": 0.0227280487012477
+    },
+    {
+      "editor": "instruct",
+      "task": "pencil_sketch",
+      "prompt": "Convert the image into a pencil sketch.",
+      "seed": 42,
+      "transform": "none",
+      "score_orig": 0.013685239477992495,
+      "score_prot": -0.010706904354414598,
+      "diff": 0.024392143832407093
+    },
+    {
+      "editor": "instruct",
+      "task": "pencil_sketch",
+      "prompt": "Convert the image into a pencil sketch.",
+      "seed": 42,
+      "transform": "resize",
+      "score_orig": 0.017518961761000623,
+      "score_prot": -0.009484172283670794,
+      "diff": 0.027003134044671417
+    },
+    {
+      "editor": "image2image",
+      "task": "shirt_color",
+      "prompt": "Change the shirt to red.",
+      "seed": 42,
+      "transform": "none",
+      "score_orig": -0.009892525637391375,
+      "score_prot": -0.045264172753245374,
+      "diff": 0.035371647115854
+    },
+    {
+      "editor": "image2image",
+      "task": "shirt_color",
+      "prompt": "Change the shirt to red.",
+      "seed": 42,
+      "transform": "resize",
+      "score_orig": -0.03358573518867436,
+      "score_prot": -0.053196954044929634,
+      "diff": 0.019611218856255275
+    },
+    {
+      "editor": "image2image",
+      "task": "hat",
+      "prompt": "Add a hat.",
+      "seed": 42,
+      "transform": "none",
+      "score_orig": 0.019550342111417846,
+      "score_prot": -0.003299120231301772,
+      "diff": 0.022849462342719618
+    },
+    {
+      "editor": "image2image",
+      "task": "hat",
+      "prompt": "Add a hat.",
+      "seed": 42,
+      "transform": "resize",
+      "score_orig": 0.0227524627521625,
+      "score_prot": 0.017122606510603544,
+      "diff": 0.005629856241558956
+    },
+    {
+      "editor": "image2image",
+      "task": "pencil_sketch",
+      "prompt": "Convert the image into a pencil sketch.",
+      "seed": 42,
+      "transform": "none",
+      "score_orig": 0.06759170245015905,
+      "score_prot": 0.011276485950899529,
+      "diff": 0.056315216499259524
+    },
+    {
+      "editor": "image2image",
+      "task": "pencil_sketch",
+      "prompt": "Convert the image into a pencil sketch.",
+      "seed": 42,
+      "transform": "resize",
+      "score_orig": 0.04194495098912743,
+      "score_prot": 0.02239174365903468,
+      "diff": 0.019553207330092748
+    }
+  ]
+}

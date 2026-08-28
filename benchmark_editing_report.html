@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>AI Privacy Shield — AI-Editing Benchmark</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;color:#222}
+h1,h2{border-bottom:1px solid #ddd;padding-bottom:.4rem}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{border:1px solid #ddd;padding:.45rem .6rem;text-align:left;font-size:.92rem}
+th{background:#f5f5f5}
+.good{color:#0a7d33;font-weight:600}
+.weak{color:#a33;font-weight:600}
+.meta{font-size:.85rem;color:#555}
+</style></head><body>
+<h1>AI Privacy Shield — AI-Editing Benchmark</h1>
+<p class="meta">Generated 2026-08-15T13:23:37+00:00 · seed 42 · device cpu<br>
+Editor InstructPix2Pix 512px / 15 steps / guidance 7.5 / image-guidance 1.5; surrogate SD1.5 (t=250, eps=0.0175); scorer CLIP ViT-L/14</p>
+<h2>Editing protection (anti-diffusion)</h2>
+<table><thead><tr><th>Image</th><th>Status</th><th>Denoising error (attack res)</th>
+<th>Verified (full res)</th><th>SSIM</th><th>PSNR</th></tr></thead>
+<tbody><tr><td>einstein.jpg</td><td>not applied</td><td>0.0%</td><td>0.0%</td><td>1.000</td><td>99.0 dB</td></tr></tbody></table>
+<h2>Editing benchmark (original → protected, same editor/settings)</h2>
+<table><thead><tr><th>Image</th><th>Task</th><th>Original</th><th>Protected</th>
+<th>Reduction</th></tr></thead><tbody><tr><td rowspan='1'>einstein.jpg</td><td colspan='5'>AI-editing benchmark failed: ModuleNotFoundError. No editing scores were computed.</td></tr></tbody></table>
+<h2>Aggregate (mean edit success)</h2>
+<table><thead><tr><th>Metric</th><th>Original</th><th>Protected</th><th>Reduction</th></tr></thead>
+<tbody><tr><td>mean_reduction_pct</td><td>0.000</td><td>0.000</td><td>0.0%</td></tr></tbody></table>
+<p class="meta">Edit success = CLIP direction score (how much the edited output moved toward the
+requested result). Positive reduction = the protected photo degraded the tested editor.
+Editor: InstructPix2Pix (held out from optimization) · Scorer: CLIP ViT-L/14.</p>
+</body></html>
